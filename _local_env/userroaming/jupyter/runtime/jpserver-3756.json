@@ -1,0 +1,13 @@
+{
+  "base_url": "/",
+  "hostname": "localhost",
+  "password": false,
+  "pid": 3756,
+  "port": 8888,
+  "root_dir": "C:\\Users\\M151325\\000_work\\python_3123\\py385_env_kan\\python3123",
+  "secure": false,
+  "sock": "",
+  "token": "8ae65286c8b366b9a9fb1429a7efe34eda93284b2c3e8a98",
+  "url": "http://localhost:8888/",
+  "version": "2.15.0"
+}
