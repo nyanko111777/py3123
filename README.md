@@ -154,3 +154,35 @@ python.exe -m pip install cufflinks
 ```
 
 
+## 大きなファイルの分割と復元
+
+GitHubにアップロードできない大きなファイル(50MB以上)を扱うためのスクリプト
+
+### 使用方法
+
+1. 大きなファイルを検索:
+```bash
+python find_large_files.py
+```
+
+2. ファイルを分割 (例: large_file.zipを分割):
+```bash
+python split_large_files.py large_file.zip
+```
+- 分割ファイルは `large_file.zip_split` ディレクトリに保存されます
+- 分割情報は `split_info.json` に記録されます
+
+3. GitHubにアップロード:
+- 分割ディレクトリ (`*_split`) を除いて、分割ファイルとJSONをリポジトリに追加
+
+4. ダウンロード後に復元:
+```bash
+python join_split_files.py large_file.zip_split
+```
+
+### .gitignore設定
+分割ディレクトリは自動的に.gitignoreに追加されます:
+```
+*_split/
+```
+

@@ -1,5 +1,11 @@
 .ipynb_checkpoints/
-node-v22.14.0-win-x64/
-_local_env\_tmp
-build/
-backend/
+# node-v22.14.0-win-x64/
+# _local_env\_tmp
+# build/
+# backend/
+
+# 50MB�ȏ�̑傫�ȃt�@�C��
+_local_env\localappdata\ms-playwright\chromium-1161\chrome-win\chrome.dll_split
+_local_env\localappdata\ms-playwright\chromium_headless_shell-1161\chrome-win\headless_shell.exe_split
+_local_env\localappdata\ms-playwright\firefox-1475\firefox\xul.dll_split
+node-v22.14.0-win-x64\node.exe_split

@@ -1,0 +1,5 @@
+*.psd filter=lfs diff=lfs merge=lfs -text
+node-v22.14.0-win-x64/node.exe filter=lfs diff=lfs merge=lfs -text
+*local*env/localappdata/ms-playwright/chromium-1161/chrome-win/chrome.dll filter=lfs diff=lfs merge=lfs -text
+*local*env/localappdata/ms-playwright/chromium_headless_shell-1161/chrome-win/headless_shell.exe filter=lfs diff=lfs merge=lfs -text
+*local*env/localappdata/ms-playwright/firefox-1475/firefox/xul.dll filter=lfs diff=lfs merge=lfs -text

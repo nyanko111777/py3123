@@ -1,0 +1,37 @@
+0 verbose cli C:\Users\kabu_server\000_work\py3123\node-v22.14.0-win-x64\node.exe C:\Users\kabu_server\000_work\py3123\node-v22.14.0-win-x64\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.2
+2 info using node@v22.14.0
+3 silly config load:file:C:\Users\kabu_server\000_work\py3123\node-v22.14.0-win-x64\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\kabu_server\000_work\py3123\_local_env\userprofile\.npmrc
+5 silly config load:file:C:\Users\kabu_server\000_work\py3123\node-v22.14.0-win-x64\etc\npmrc
+6 verbose title npm install yarn
+7 verbose argv "install" "--global" "yarn"
+8 verbose logfile logs-max:10 dir:C:\Users\kabu_server\000_work\py3123\_local_env\localappdata\npm-cache\_logs\2025-03-25T09_37_37_954Z-
+9 verbose logfile C:\Users\kabu_server\000_work\py3123\_local_env\localappdata\npm-cache\_logs\2025-03-25T09_37_37_954Z-debug-0.log
+10 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+11 silly logfile done cleaning log files
+12 silly idealTree buildDeps
+13 silly fetch manifest yarn@*
+14 silly packumentCache full:https://registry.npmjs.org/yarn cache-miss
+15 http fetch GET 200 https://registry.npmjs.org/npm 239ms
+16 http fetch GET 200 https://registry.npmjs.org/yarn 207ms (cache miss)
+17 silly packumentCache full:https://registry.npmjs.org/yarn set size:undefined disposed:false
+18 silly placeDep ROOT yarn@1.22.22 OK for:  want: *
+19 silly reify moves {}
+20 http cache yarn@https://registry.npmjs.org/yarn/-/yarn-1.22.22.tgz 1ms (cache hit)
+21 silly tarball no local data for yarn@https://registry.npmjs.org/yarn/-/yarn-1.22.22.tgz. Extracting by manifest.
+22 http fetch GET 200 https://registry.npmjs.org/yarn/-/yarn-1.22.22.tgz 162ms (cache miss)
+23 info run yarn@1.22.22 preinstall node_modules/yarn :; (node ./preinstall.js > /dev/null 2>&1 || true)
+24 info run yarn@1.22.22 preinstall { code: 0, signal: null }
+25 silly ADD node_modules/yarn
+26 verbose cwd C:\Users\kabu_server\000_work\py3123\python3123
+27 verbose os Windows_NT 10.0.26100
+28 verbose node v22.14.0
+29 verbose npm  v10.9.2
+30 notice
+30 notice New [31mmajor[39m version of npm available! [31m10.9.2[39m -> [34m11.2.0[39m
+30 notice Changelog: [34mhttps://github.com/npm/cli/releases/tag/v11.2.0[39m
+30 notice To update run: [4mnpm install -g npm@11.2.0[24m
+30 notice  { force: true, [Symbol(proc-log.meta)]: true }
+31 verbose exit 0
+32 info ok
