@@ -18,22 +18,22 @@ def find_large_files(directory='.', min_size_mb=50):
     
     return large_files
 
-def split_large_files(large_files):
-    """見つかった大きなファイルを分割"""
+def process_large_files(large_files):
+    """見つかった大きなファイルを処理（分割とgitignore更新）"""
+    # 分割処理
     for file_path, _ in large_files:
         print(f"\n{file_path} を分割中...")
         os.system(f'python split_large_files.py "{file_path}"')
         print(f"{file_path} の分割が完了しました")
-
-def update_gitignore(large_files):
-    """見つかった大きなファイルを.gitignoreに追加"""
+    
+    # gitignore更新
     gitignore_path = Path('.gitignore')
     if not gitignore_path.exists():
         gitignore_path.touch()
     
     existing_entries = set()
     if gitignore_path.stat().st_size > 0:
-        with open(gitignore_path, 'r') as f:
+        with open(gitignore_path, 'r', encoding='utf-8') as f:
             existing_entries = set(line.strip() for line in f if line.strip())
     
     new_entries = set()
@@ -45,7 +45,7 @@ def update_gitignore(large_files):
     
     to_add = new_entries - existing_entries
     if to_add:
-        with open(gitignore_path, 'a') as f:
+        with open(gitignore_path, 'a', encoding='utf-8') as f:
             f.write('\n# 50MB以上の大きなファイル\n')
             for entry in sorted(to_add):
                 f.write(f"{entry}\n")
@@ -62,6 +62,8 @@ if __name__ == '__main__':
         for file_path, size in large_files:
             print(f"{size/1024/1024:.2f}MB - {file_path}")
         
-        update_gitignore(large_files)
+        count = process_large_files(large_files)
+        print(f"\n{count}個のファイルを分割処理しました")
+        
     else:
         print("50MB以上のファイルは見つかりませんでした。")

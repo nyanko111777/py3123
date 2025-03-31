@@ -1,3 +1,4 @@
+import os
 import json
 from pathlib import Path
 
@@ -30,17 +31,49 @@ def join_files(split_dir):
         print(f"警告: 復元後のファイルサイズが一致しません - {original_path}")
         return False
 
+def find_split_dirs(directory='.'):
+    """_splitで終わるディレクトリを再帰的に検索"""
+    split_dirs = []
+    for root, dirs, _ in os.walk(directory):
+        for dir_name in dirs:
+            if dir_name.endswith('_split'):
+                split_dirs.append(Path(root) / dir_name)
+    return split_dirs
+
 if __name__ == '__main__':
     import sys
-    if len(sys.argv) != 2:
+    
+    if len(sys.argv) == 1:
+        # 引数なし: 自動検索モード
+        split_dirs = find_split_dirs()
+        if not split_dirs:
+            print("結合可能な分割ディレクトリが見つかりませんでした")
+            sys.exit(0)
+            
+        print("以下の分割ディレクトリが見つかりました:")
+        for i, dir_path in enumerate(split_dirs, 1):
+            print(f"{i}: {dir_path}")
+            
+        total_success = True
+        for dir_path in split_dirs:
+            print(f"\n{dir_path} を結合中...")
+            success = join_files(dir_path)
+            total_success = total_success and success
+            
+        sys.exit(0 if total_success else 1)
+        
+    elif len(sys.argv) == 2:
+        # 従来の単一ディレクトリ指定モード
+        split_dir = sys.argv[1]
+        if not Path(split_dir).exists():
+            print(f"エラー: ディレクトリが見つかりません - {split_dir}")
+            sys.exit(1)
+            
+        success = join_files(split_dir)
+        sys.exit(0 if success else 1)
+        
+    else:
         print("使用方法: python join_split_files.py [分割ディレクトリパス]")
-        print("例: python join_split_files.py large_file_split")
+        print("例1: python join_split_files.py (自動検索モード)")
+        print("例2: python join_split_files.py large_file_split")
         sys.exit(1)
-    
-    split_dir = sys.argv[1]
-    if not Path(split_dir).exists():
-        print(f"エラー: ディレクトリが見つかりません - {split_dir}")
-        sys.exit(1)
-    
-    success = join_files(split_dir)
-    sys.exit(0 if success else 1)

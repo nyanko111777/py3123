@@ -1,0 +1,23 @@
+{
+  "original_path": "_local_env\\localappdata\\ms-playwright\\chromium_headless_shell-1161\\chrome-win\\headless_shell.exe",
+  "original_size": 172392960,
+  "chunk_size_mb": 49,
+  "chunks": [
+    {
+      "name": "headless_shell.exe.part000",
+      "size": 51380224
+    },
+    {
+      "name": "headless_shell.exe.part001",
+      "size": 51380224
+    },
+    {
+      "name": "headless_shell.exe.part002",
+      "size": 51380224
+    },
+    {
+      "name": "headless_shell.exe.part003",
+      "size": 18252288
+    }
+  ]
+}

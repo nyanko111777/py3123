@@ -1,0 +1,19 @@
+{
+  "original_path": "_local_env\\localappdata\\ms-playwright\\firefox-1475\\firefox\\xul.dll",
+  "original_size": 151485952,
+  "chunk_size_mb": 49,
+  "chunks": [
+    {
+      "name": "xul.dll.part000",
+      "size": 51380224
+    },
+    {
+      "name": "xul.dll.part001",
+      "size": 51380224
+    },
+    {
+      "name": "xul.dll.part002",
+      "size": 48725504
+    }
+  ]
+}

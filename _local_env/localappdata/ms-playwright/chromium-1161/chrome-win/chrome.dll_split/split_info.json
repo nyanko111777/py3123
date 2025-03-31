@@ -1,0 +1,27 @@
+{
+  "original_path": "_local_env\\localappdata\\ms-playwright\\chromium-1161\\chrome-win\\chrome.dll",
+  "original_size": 244465664,
+  "chunk_size_mb": 49,
+  "chunks": [
+    {
+      "name": "chrome.dll.part000",
+      "size": 51380224
+    },
+    {
+      "name": "chrome.dll.part001",
+      "size": 51380224
+    },
+    {
+      "name": "chrome.dll.part002",
+      "size": 51380224
+    },
+    {
+      "name": "chrome.dll.part003",
+      "size": 51380224
+    },
+    {
+      "name": "chrome.dll.part004",
+      "size": 38944768
+    }
+  ]
+}
