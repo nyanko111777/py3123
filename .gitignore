@@ -31,3 +31,7 @@ headless_shell.exe
 node-v22.14.0-win-x64\node.exe
 node.exe
 xul.dll
+
+# 50MB以上の大きなファイル
+python3123\Lib\site-packages\playwright\driver\node.exe
+python3123\Lib\site-packages\playwright\driver\node.exe_split
