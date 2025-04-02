@@ -33,7 +33,37 @@ python.exe -m pip install jupyterlab-git
 python.exe -m pip install ipywidgets
 python.exe -m pip install qgrid
 python.exe -m pip install jupyter-contrib-nbextensions
+
+
+
+python.exe -m pip install playwright
+python.exe -m 
+python.exe -m 
+python.exe -m 
+python.exe -m 
+python.exe -m 
+python.exe -m 
+
 ```
+
+Windowsで長いパスを有効にする（推奨）:
+
+これが根本的な解決策になる可能性が高いです。
+
+管理者として PowerShell を開きます。（スタートメニューで "PowerShell" を検索し、右クリックして「管理者として実行」を選びます）
+
+以下のコマンドを実行します:
+
+New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
+Use code with caution.
+Powershell
+重要: 設定を反映させるために、必ずコンピューターを再起動してください。
+
+再起動後、エラーが出たのと同じターミナル（コマンドプロンプト）で、再度インストールコマンドを実行します:
+
+python.exe -m pip install jupyter-contrib-nbextensions
+
+
 `
 ```
 cd lib\site-packages\qgrid
@@ -136,7 +166,7 @@ python.exe -m pip install nicegui
 python.exe -m pip install justpy
 python.exe -m pip install zeep
 python.exe -m pip install xmltodict
-python.exe -m pip install beautiflsoup4
+python.exe -m pip install beautifulsoup4
 python.exe -m pip install matplotlib
 python.exe -m pip install japanize-matplotlib
 python.exe -m pip install seaborn
@@ -151,6 +181,15 @@ python.exe -m pip install pptx2md
 python.exe -m pip install mouse
 python.exe -m pip install PyMuPDF
 python.exe -m pip install cufflinks
+
+python.exe -m pip install creopyson
+python.exe -m pip install pyautogui
+python.exe -m 
+python.exe -m 
+python.exe -m 
+python.exe -m 
+python.exe -m 
+
 ```
 
 
