@@ -34,6 +34,8 @@ python.exe -m pip install jupyterlab-git
 python.exe -m pip install ipywidgets
 python.exe -m pip install qgrid
 python.exe -m pip install jupyter-contrib-nbextensions
+pip install markitdown
+
 
 
 
