@@ -35,3 +35,9 @@ xul.dll
 # 50MB以上の大きなファイル
 python3123\Lib\site-packages\playwright\driver\node.exe
 python3123\Lib\site-packages\playwright\driver\node.exe_split
+
+# 50MB以上の大きなファイル
+.git\objects\pack\pack-1398aa3b048d13cbc3fd30d0965fa2cc30dffaa8.pack
+.git\objects\pack\pack-1398aa3b048d13cbc3fd30d0965fa2cc30dffaa8.pack_split
+pack-1398aa3b048d13cbc3fd30d0965fa2cc30dffaa8.pack
+_local_env/

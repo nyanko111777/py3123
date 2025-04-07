@@ -17,6 +17,7 @@ Windows embeddable package を使用
 ### ライブラリ
 
 ```
+python -m pip install --target . tkinter-embed
 python.exe -m pip install jupyter
 python -m pip install --upgrade setuptools wheel
 python.exe -m pip install jupyter_contrib_nbextensions
