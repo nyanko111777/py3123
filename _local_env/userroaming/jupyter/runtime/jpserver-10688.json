@@ -1,0 +1,13 @@
+{
+  "base_url": "/",
+  "hostname": "localhost",
+  "password": false,
+  "pid": 10688,
+  "port": 8888,
+  "root_dir": "C:\\Users\\kabu_server\\000_work\\py3123\\CODE",
+  "secure": false,
+  "sock": "",
+  "token": "928264210aaa6e57056cc779da959fb3be883dc56559d68a",
+  "url": "http://localhost:8888/",
+  "version": "2.15.0"
+}

@@ -1,8 +1,12 @@
 .ipynb_checkpoints/
-# node-v22.14.0-win-x64/
-# _local_env\_tmp
-# build/
-# backend/
+node-v22.14.0-win-x64/
+_local_env/_tmp/
+_local_env/userroaming/Code/
+# _local_env/localappdata/
+# _local_env/LocalLow/
+build/
+backend/
+*.pyc
 
 # 50MB�ȏ�̑傫�ȃt�@�C��
 _local_env\localappdata\ms-playwright\chromium-1161\chrome-win\chrome.dll_split
@@ -40,4 +44,4 @@ python3123\Lib\site-packages\playwright\driver\node.exe_split
 .git\objects\pack\pack-1398aa3b048d13cbc3fd30d0965fa2cc30dffaa8.pack
 .git\objects\pack\pack-1398aa3b048d13cbc3fd30d0965fa2cc30dffaa8.pack_split
 pack-1398aa3b048d13cbc3fd30d0965fa2cc30dffaa8.pack
-_local_env/
+

@@ -1,0 +1,8 @@
+{
+    "enableKernelInitNotification": false,
+    "codeCellConfig": {
+        "autoClosingBrackets": true,
+        "lineNumbers": false,
+        "lineWrap": false
+    }
+}
