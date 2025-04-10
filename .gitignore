@@ -1,6 +1,6 @@
 .ipynb_checkpoints/
-_local_env/_tmp/
-_local_env/userroaming/Code/
+# _local_env/_tmp/
+# _local_env/userroaming/Code/
 # _local_env/localappdata/
 # _local_env/LocalLow/
 build/
