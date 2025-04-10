@@ -1,28 +1,32 @@
 #!/usr/bin/env pwsh
-$basedir=Split-Path $MyInvocation.MyCommand.Definition -Parent
 
-$exe=""
-if ($PSVersionTable.PSVersion -lt "6.0" -or $IsWindows) {
-  # Fix case when both the Windows and Linux builds of Node
-  # are installed in the same directory
-  $exe=".exe"
+$NODE_EXE="$PSScriptRoot/node.exe"
+if (-not (Test-Path $NODE_EXE)) {
+  $NODE_EXE="$PSScriptRoot/node"
 }
-$ret=0
-if (Test-Path "$basedir/node$exe") {
-  # Support pipeline input
-  if ($MyInvocation.ExpectingInput) {
-    $input | & "$basedir/node$exe"  "$basedir/node_modules/npm/bin/npx-cli.js" $args
-  } else {
-    & "$basedir/node$exe"  "$basedir/node_modules/npm/bin/npx-cli.js" $args
-  }
-  $ret=$LASTEXITCODE
+if (-not (Test-Path $NODE_EXE)) {
+  $NODE_EXE="node"
+}
+
+$NPM_PREFIX_JS="$PSScriptRoot/node_modules/npm/bin/npm-prefix.js"
+$NPX_CLI_JS="$PSScriptRoot/node_modules/npm/bin/npx-cli.js"
+$NPM_PREFIX=(& $NODE_EXE $NPM_PREFIX_JS)
+
+if ($LASTEXITCODE -ne 0) {
+  Write-Host "Could not determine Node.js install directory"
+  exit 1
+}
+
+$NPM_PREFIX_NPX_CLI_JS="$NPM_PREFIX/node_modules/npm/bin/npx-cli.js"
+if (Test-Path $NPM_PREFIX_NPX_CLI_JS) {
+  $NPX_CLI_JS=$NPM_PREFIX_NPX_CLI_JS
+}
+
+# Support pipeline input
+if ($MyInvocation.ExpectingInput) {
+  $input | & $NODE_EXE $NPX_CLI_JS $args
 } else {
-  # Support pipeline input
-  if ($MyInvocation.ExpectingInput) {
-    $input | & "node$exe"  "$basedir/node_modules/npm/bin/npx-cli.js" $args
-  } else {
-    & "node$exe"  "$basedir/node_modules/npm/bin/npx-cli.js" $args
-  }
-  $ret=$LASTEXITCODE
+  & $NODE_EXE $NPX_CLI_JS $args
 }
-exit $ret
+
+exit $LASTEXITCODE
