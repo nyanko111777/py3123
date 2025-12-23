@@ -44,3 +44,6 @@ python3123\Lib\site-packages\playwright\driver\node.exe_split
 .git\objects\pack\pack-1398aa3b048d13cbc3fd30d0965fa2cc30dffaa8.pack_split
 pack-1398aa3b048d13cbc3fd30d0965fa2cc30dffaa8.pack
 
+dist/
+backend/
+start_servers.bat
