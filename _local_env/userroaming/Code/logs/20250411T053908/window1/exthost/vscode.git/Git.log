@@ -1,0 +1,17 @@
+2025-04-11 05:39:15.047 [info] ログ レベル: Info
+2025-04-11 05:39:15.047 [info] Git の検証が検出されました: "C:\Program Files\Git\cmd\git.exe"
+2025-04-11 05:39:15.195 [info] "C:\Program Files\Git\cmd\git.exe" から Git "2.41.0.windows.3" を使用しています
+2025-04-11 05:39:15.375 [info] > git rev-parse --show-toplevel [151ms]
+2025-04-11 05:39:16.564 [info] > git rev-parse --git-dir --git-common-dir [158ms]
+2025-04-11 05:39:16.575 [info] Open repository: c:\Users\kabu_server\000_work\py3123_diff
+2025-04-11 05:39:16.719 [info] > git rev-parse --show-toplevel [129ms]
+2025-04-11 05:39:16.723 [info] > git config --get commit.template [138ms]
+2025-04-11 05:39:16.752 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [152ms]
+2025-04-11 05:39:16.932 [info] > git status -z -uall [171ms]
+2025-04-11 05:39:17.093 [info] > git merge-base refs/heads/main refs/remotes/origin/main [152ms]
+2025-04-11 05:39:17.131 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [164ms]
+2025-04-11 05:39:17.141 [info] > git config --get commit.template [185ms]
+2025-04-11 05:39:17.208 [info] > git -c core.longpaths=true rev-list --count --left-right refs/heads/main...refs/remotes/origin/main [108ms]
+2025-04-11 05:39:17.216 [info] > git check-ignore -v -z --stdin [102ms]
+2025-04-11 05:39:17.242 [info] > git status -z -uall [96ms]
+2025-04-11 05:39:17.288 [info] > git diff --name-status -z --diff-filter=ADMR 90a1a889e593d60f0532964ff9ca85c2e5dfb5da...refs/remotes/origin/main [73ms]

@@ -1,0 +1,13 @@
+{
+  "shell_port": 50640,
+  "iopub_port": 50641,
+  "stdin_port": 50642,
+  "control_port": 50644,
+  "hb_port": 50643,
+  "ip": "127.0.0.1",
+  "key": "337593de-895b96ba4b3a2452baa7b3b8",
+  "transport": "tcp",
+  "signature_scheme": "hmac-sha256",
+  "kernel_name": "python3",
+  "jupyter_session": "C:\\Users\\kabu_server\\000_work\\py3123\\CODE\\test.ipynb"
+}
